@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="Qjs-wJ-KL0">
             <objects>
-                <viewController id="kda-Jz-yMm" sceneMemberID="viewController">
+                <viewController id="kda-Jz-yMm" customClass="AddPhotoViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljT-8b-D2y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,9 +59,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-sU-c4Z">
-                                <rect key="frame" x="136" y="495" width="107" height="30"/>
+                                <rect key="frame" x="93" y="489" width="199" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save this Photo"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
+                                <state key="normal" title="Save this Photo">
+                                    <color key="titleColor" red="0.23105648770000001" green="0.14036743860000001" blue="0.33866985100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bF-GH-NnF">
                                 <rect key="frame" x="119" y="418" width="141" height="30"/>
@@ -71,20 +74,35 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je2-Uy-eFV">
-                                <rect key="frame" x="62" y="608" width="54" height="30"/>
+                                <rect key="frame" x="49" y="605" width="84" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.1188660886" green="0.23574603250000001" blue="0.47716968910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="kda-Jz-yMm" eventType="touchUpInside" id="PTb-a3-TgJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUy-9a-uB2">
-                                <rect key="frame" x="258" y="608" width="52" height="30"/>
+                                <rect key="frame" x="241" y="605" width="88" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Albums"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <state key="normal" title="Albums">
+                                    <color key="titleColor" red="0.1188660886" green="0.23574603250000001" blue="0.47716968910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="albumsTapped:" destination="kda-Jz-yMm" eventType="touchUpInside" id="hKL-HH-lkr"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.91987359537792157" green="0.89826285347339674" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1dK-a0-Soj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="hHe-EO-Jnm"/>
+                    <connections>
+                        <outlet property="imageView" destination="280-Ih-rKL" id="d9M-Kj-mBa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvK-L8-2Ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +128,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="images" width="244" height="207"/>
+        <image name="images" width="122" height="103.5"/>
     </resources>
 </document>
