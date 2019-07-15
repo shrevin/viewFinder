@@ -14,6 +14,8 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var captionText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //image picker is the object that is created
@@ -32,6 +34,25 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func cameraTapped(_ sender: Any) {
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func savePhotoTapped(_ sender: UIButton) {
+        //the if statement below allows you to access the photo data
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let photoToSave = Photos(entity: Photos.entity(), insertInto: context)
+            photoToSave.caption = captionText.text
+            
+            if let userImage = imageView.image {
+                if let userImageData = userImage.pngData(){
+                    photoToSave.imageData = userImageData
+                }
+            }
+            
+        }
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        //Photos is the name of our core data entity
+        navigationController?.popViewController(animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

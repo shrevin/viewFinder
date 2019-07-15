@@ -13,6 +13,7 @@
 		18C55FE622DD0CC000C6FB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C55FE522DD0CC000C6FB97 /* Assets.xcassets */; };
 		18C55FE922DD0CC000C6FB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C55FE722DD0CC000C6FB97 /* LaunchScreen.storyboard */; };
 		18C55FF122DD157200C6FB97 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C55FF022DD157200C6FB97 /* AddPhotoViewController.swift */; };
+		18C55FF322DD2D8D00C6FB97 /* PhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C55FF222DD2D8D00C6FB97 /* PhotoTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		18C55FE822DD0CC000C6FB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C55FEA22DD0CC000C6FB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C55FF022DD157200C6FB97 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		18C55FF222DD2D8D00C6FB97 /* PhotoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				18C55FEA22DD0CC000C6FB97 /* Info.plist */,
 				18C55FE222DD0CBD00C6FB97 /* viewFinder.xcdatamodeld */,
 				18C55FF022DD157200C6FB97 /* AddPhotoViewController.swift */,
+				18C55FF222DD2D8D00C6FB97 /* PhotoTableTableViewController.swift */,
 			);
 			path = viewFinder;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				18C55FE422DD0CBD00C6FB97 /* viewFinder.xcdatamodeld in Sources */,
 				18C55FF122DD157200C6FB97 /* AddPhotoViewController.swift in Sources */,
 				18C55FDC22DD0CBD00C6FB97 /* AppDelegate.swift in Sources */,
+				18C55FF322DD2D8D00C6FB97 /* PhotoTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
